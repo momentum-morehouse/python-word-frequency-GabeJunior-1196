@@ -11,12 +11,10 @@ def print_word_freq(file):
     # first open the file
     with open(file) as f:
         lyrics = f.readlines()
-        
         word_list = [line.split() for line in lyrics]
-        
 
-        word_list = [n for short_list in word_list for n in short_list]
-        
+
+    word_list = [n for short_list in word_list for n in           short_list]
     cleaned_array = []
     for word in word_list:
         word = word.lower()
